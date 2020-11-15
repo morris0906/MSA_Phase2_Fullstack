@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Divider } from '@material-ui/core';
+import SocialMedia from './components/SocialMedia';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <h1>
+          Hi, welcome to this demo website!
+        </h1>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://ruliweb.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          루리웹
         </a>
       </header>
+      <Divider />
+      <div className="Share">
+        <SocialMedia />
+      </div>
     </div>
   );
 }
