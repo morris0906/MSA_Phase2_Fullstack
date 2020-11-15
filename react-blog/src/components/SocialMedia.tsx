@@ -42,22 +42,22 @@ export default function SocialMedia() {
 
     return (
         <div className={classes.share}>
-            <EmailShareButton url = {"https://ruliweb.com"}>
+            <EmailShareButton url = {"https://somereactblog.azurewebsites.net"}>
             <Avatar className={classes.ShareButton}>
                     <EmailIcon />
                 </Avatar>
             </EmailShareButton>
-            <FacebookShareButton url={"https://ruliweb.com"}>
+            <FacebookShareButton url={"https://somereactblog.azurewebsites.net"}>
             <Avatar className={classes.ShareButton}>
                     <FacebookIcon />
                 </Avatar>
             </FacebookShareButton>
-            <LineShareButton url={"https://ruliweb.com"}>
+            <LineShareButton url={"https://somereactblog.azurewebsites.net"}>
             <Avatar className={classes.ShareButton}>
                     <LineIcon />
                 </Avatar>
             </LineShareButton>
-            <LinkedinShareButton url={"https://ruliweb.com"}>
+            <LinkedinShareButton url={"https://somereactblog.azurewebsites.net"}>
             <Avatar className={classes.ShareButton}>
                     <LinkedinIcon />
                 </Avatar>
