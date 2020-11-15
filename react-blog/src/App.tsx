@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          루리웹
+          루리웹 링크
         </a>
       </header>
       <Divider />
