@@ -2,10 +2,12 @@ import React from 'react';
 import './App.css';
 import { Divider } from '@material-ui/core';
 import SocialMedia from './components/SocialMedia';
+import LoginNav from './components/Login';
 
 function App() {
   return (
     <div className="App">
+      <LoginNav />
       <header className="App-header">
         <h1>
           Hi, welcome to this demo website!
