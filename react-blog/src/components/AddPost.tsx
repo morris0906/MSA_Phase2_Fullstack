@@ -10,8 +10,6 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import { TransitionProps } from "@material-ui/core/transitions";
 import TextField from "@material-ui/core/TextField";
-import AddIcon from "@material-ui/icons/Add";
-import Fab from "@material-ui/core/Fab";
 import { useTranslation } from "react-i18next";
 import "./I18n";
 import { IUserInput } from "./Interface";
@@ -119,9 +117,11 @@ export default function AddPost(props: ISearchBarProps) {
 
   return (
     <div>
-      <Fab color="primary" aria-label="add" onClick={handleClickOpen}>
-        <AddIcon />
-      </Fab>
+      <br />
+      <Button variant="contained" color="primary" onClick={handleClickOpen}>
+        {t("Add")}
+      </Button>
+
 
       <Dialog
         fullScreen

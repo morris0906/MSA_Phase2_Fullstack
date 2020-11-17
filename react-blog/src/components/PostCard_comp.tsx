@@ -104,7 +104,7 @@ function PostCard(props: IMediaCardProps) {
 
               <Typography
                 variant="body2"
-                color="textSecondary"
+                color="textPrimary"
                 component="p"
                 paragraph
               >
@@ -124,18 +124,6 @@ function PostCard(props: IMediaCardProps) {
       </div>
 
       <CardActions>
-        {/* <IconButton aria-label="likes" onClick={handlelike}>
-          <ThumbUpAltIcon />
-        </IconButton>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {Likecount}
-        </Typography>
-        <IconButton aria-label="dislikes" onClick={handleDislike}>
-          <ThumbDownIcon />
-        </IconButton>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {Dislikecount}
-        </Typography> */}
         <Button size="small" color="secondary" onClick={handleDelete}>
           {t("Delete")}
         </Button>

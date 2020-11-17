@@ -38,8 +38,8 @@ function PostGrid(props: any) {
     } else {
       Cards.push(
         <div className={classes.root}>
-          <Grid container spacing={3}>
-            <Grid key={"card_" + i} item xs={12}>
+          <Grid container wrap="nowrap" spacing={3}>
+            <Grid key={"card_" + i} item xs={12} sm={6} zeroMinWidth>
               <PostCard
                 Title={el["title"]}
                 Content={el["content"]}

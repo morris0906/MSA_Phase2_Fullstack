@@ -3,7 +3,7 @@ import './App.css';
 import { Divider } from '@material-ui/core';
 import SocialMedia from './components/SocialMedia';
 import LoginNav from './components/Login';
-import LanguageMenu from './components/LanguageMenu_comp';
+import LanguageMenu from './components/LanguageMenu';
 import { IUserInput } from "./components/Interface";
 import PostGrid from "./components/PostGrid_comp";
 import AddPost from "./components/AddPost";
@@ -11,13 +11,17 @@ import { useTranslation } from "react-i18next";
 import "./components/I18n";
 
 function App() {
+
   const [UserInput, setUserInput] = React.useState<IUserInput>({
     SearchQuery: "adventure",
   });
+
   function SetUserInput(a: IUserInput) {
     setUserInput(a);
   }
+
   const { t, i18n } = useTranslation();
+  
   return (
     <div className="App">
       <LoginNav />
