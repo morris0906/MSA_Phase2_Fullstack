@@ -7,6 +7,8 @@ import LanguageMenu from './components/LanguageMenu_comp';
 import { IUserInput } from "./components/Interface";
 import PostGrid from "./components/PostGrid_comp";
 import AddPost from "./components/AddPost";
+import { useTranslation } from "react-i18next";
+import "./components/I18n";
 
 function App() {
   const [UserInput, setUserInput] = React.useState<IUserInput>({
@@ -15,17 +17,20 @@ function App() {
   function SetUserInput(a: IUserInput) {
     setUserInput(a);
   }
+  const { t, i18n } = useTranslation();
   return (
     <div className="App">
       <LoginNav />
       <LanguageMenu />
       <header className="App-header">
-        <h1>
-          Hi, welcome to this demo website!
-        </h1>
+        <h3>
+          {t("Welcome1")}
+          <br />
+          {t("Welcome2")}
+        </h3>
       </header>
       <Divider variant="middle" />
-      <div className="add">
+      <div className="Add">
         <AddPost SetUserInput={(a: IUserInput) => SetUserInput(a)} />
       </div>
       <PostGrid SearchQuery={UserInput.SearchQuery} />

@@ -40,8 +40,6 @@ export default function SimpleMenu() {
         onClose={() => handleClose(CurLan)}
       >
         <MenuItem onClick={() => handleClose("en")}>English</MenuItem>
-        <MenuItem onClick={() => handleClose("es")}>Spanish</MenuItem>
-        <MenuItem onClick={() => handleClose("chi")}>Chinese</MenuItem>
         <MenuItem onClick={() => handleClose("ko")}>Korean</MenuItem>
       </Menu>
       <p></p>

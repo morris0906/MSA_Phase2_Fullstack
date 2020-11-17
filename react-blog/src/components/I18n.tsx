@@ -2,7 +2,6 @@ import I18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // the translations
-// (tip move them in a JSON file and import them)
 const resources = {
   en: {
     translation: {
@@ -10,46 +9,26 @@ const resources = {
       DatePosted: " DatePosted ",
       AddPost: " Add New Post ",
       Save: " Save ",
-      Title: " Title of blog ",
-      Content: " Write your blog here! ",
+      Title: " Title ",
+      Content: " Write here! ",
       Curr: "English",
       Add: "Add!",
-    },
-  },
-  es: {
-    translation: {
-      Delete: "Eliminar ",
-      DatePosted: " fecha de publicación ",
-      AddPost: " Agregar nueva publicación ",
-      Save: " salvar ",
-      Title: " Título del blog ",
-      Content: " Escribe tu blog aquí! ",
-      Curr: "española",
-      Add: "añadir!",
-    },
-  },
-  chi: {
-    translation: {
-      Delete: "删除 ",
-      DatePosted: " 发布日期 ",
-      AddPost: " 加入新博客 ",
-      Save: " 保存 ",
-      Title: " 博客名 ",
-      Content: " 博客在这里写! ",
-      Curr: "中文",
-      Add: "加!",
+      Welcome1: "Hi, welcome to online notepad!",
+      Welcome2: "Press the button bleow to post.",
     },
   },
   ko: {
     translation: {
-      Delete: "지우다 ",
+      Delete: "지우기 ",
       DatePosted: " 게시 된 날짜 ",
-      AddPost: " 새 블로그 추가 ",
-      Save: " 저장 ",
-      Title: " 블로그 제목",
-      Content: " 여기에 블로그 작성! ",
+      AddPost: " 새 메모 작성 ",
+      Save: " 올리기 ",
+      Title: " 메모 제목",
+      Content: " 메모 작성! ",
       Curr: "한국어",
-      Add: "더하다!",
+      Add: "추가!",
+      Welcome1: "온라인 메모장에 오신것을 환영합니다!",
+      Welcome2: "하단의 버튼을 눌러 메모를 작성하세요.",
     },
   },
 };
