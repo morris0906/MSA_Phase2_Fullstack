@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { GoogleLogin, GoogleLogout, useGoogleLogout } from "react-google-login";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -32,7 +32,6 @@ export default function LoginNav() {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAuth(event.target.checked);
@@ -51,6 +50,10 @@ export default function LoginNav() {
     setPP(response.profileObj.imgUrl);
   };
 
+  const onLogoutSuccess = () => {
+    alert('Logout Success');
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -59,8 +62,14 @@ export default function LoginNav() {
             clientId="371541609248-hnrougnn2i4q649om9fdj870e6hmmkcd.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogle}
+            isSignedIn={true}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
+          />
+          <GoogleLogout
+            clientId="371541609248-hnrougnn2i4q649om9fdj870e6hmmkcd.apps.googleusercontent.com"
+            buttonText="Logout"
+            onLogoutSuccess={onLogoutSuccess}
           />
           {auth && (
             <div>
