@@ -26,20 +26,28 @@ function PostGrid(props: any) {
       .then((response) => {
         console.log(response);
         setItemArray(response);
-        console.log("why not work then?");
+        console.log("why?");
       })
       .catch(() => console.log("it didn't work"));
   }, [props.SearchQuery]);
 
   var Cards: JSX.Element[] = [];
-  ItemArray.forEach((el: any, i: Number) => {
+  ItemArray.forEach((el: any) => {
     if (el === undefined) {
       return;
     } else {
       Cards.push(
         <div className={classes.root}>
           <Grid container wrap="nowrap" spacing={3}>
-            <Grid key={"card_" + i} item xs={12} sm={6} zeroMinWidth>
+            <Grid  item xs={12} sm={6} zeroMinWidth>
+              <PostCard
+                Title={el["title"]}
+                Content={el["content"]}
+                ID={el["id"]}
+                Date={el["datePosted"]}
+              />
+            </Grid>
+            <Grid  item xs={12} sm={6} zeroMinWidth>
               <PostCard
                 Title={el["title"]}
                 Content={el["content"]}
