@@ -5,4 +5,4 @@
 
 ### Agile Module
 
-![Agile-Module](Agile.PNG)
+![Agile-Module](Agile.png)
